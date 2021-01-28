@@ -9,9 +9,10 @@ import { toast } from 'react-toastify';
 
 import styled from 'styled-components'
 
-//import LogoDark from '../../assets/svg/logo_white.svg'
+import Logo from '../../assets/svg/logo.svg'
+import LogoDark from '../../assets/svg/logo_white.svg'
 import { useActiveWeb3React } from '../../hooks'
-//import { useDarkModeManager } from '../../state/user/hooks'
+import { useDarkModeManager } from '../../state/user/hooks'
 import { useETHBalances } from '../../state/wallet/hooks'
 /**import { CardNoise } from '../earn/styled'
 import { CountUp } from 'use-count-up'
@@ -228,7 +229,7 @@ export default function Header() {
   const { t } = useTranslation()
 
   const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
-  //const [isDark] = useDarkModeManager()
+  const [isDark] = useDarkModeManager()
 
   //const toggleClaimModal = useToggleSelfClaimModal()
 
@@ -253,7 +254,7 @@ export default function Header() {
       </Modal>
       <HeaderRow>
         <Title href=".">
-          valuedex.io
+          <img width={'32px'} src={isDark ? LogoDark : Logo} alt="logo" />
         </Title>
         <HeaderLinks>
           <StyledNavLink id={`swap-nav-link`} to={'/swap'}>
