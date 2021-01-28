@@ -29,7 +29,7 @@ async function getColorFromToken(token: Token): Promise<string | null> {
 }
 
 export function useColor(token?: Token) {
-  const [color, setColor] = useState('#2172E5')
+  const [color, setColor] = useState('#00e5b9')
 
   useLayoutEffect(() => {
     let stale = false
@@ -44,7 +44,7 @@ export function useColor(token?: Token) {
 
     return () => {
       stale = true
-      setColor('#2172E5')
+      setColor('#00e5b9')
     }
   }, [token])
 

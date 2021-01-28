@@ -2755,10 +2755,10 @@
   resolved "https://registry.yarnpkg.com/@uniswap/merkle-distributor/-/merkle-distributor-1.0.1.tgz#dc3d911f65a860fc3f0cae074bdcd08ed6a27a4d"
   integrity sha512-5gDiTI5hrXIh5UWTrxKYjw30QQDnpl8ckDSpefldNenDlYO1RKkdUYMYpvrqGi2r7YzLYTlO6+TDlNs6O7hDRw==
 
-"@uniswap/sdk@npm:quickswap-sdk@3.0.8":
-  version "3.0.8"
-  resolved "https://registry.yarnpkg.com/quickswap-sdk/-/quickswap-sdk-3.0.8.tgz#7fada995bb4e054212a0920de1f29977d617c997"
-  integrity sha512-1pMOS5/RC4K++RCrt3hrhSHDzzVzy40CiLgM8UbvdSVUuYMN5jZZVocbkG+5fRlJA1JqhKhs2OYYLh08t50KOw==
+"@uniswap/sdk@npm:valuedex-sdk@3.0.4", valuedex-sdk@3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/valuedex-sdk/-/valuedex-sdk-3.0.4.tgz#ea6ad07b2515381ef4ee5cff3f1de68dbf7f442a"
+  integrity sha512-yQQfbWtv/JBpYiSuzvRp2NpcMkAsDu4Iq3DZZjPl63ca3BO+C2dsbverCTC+np16T8qeIbkDljr1WZMbsSlOQQ==
   dependencies:
     "@uniswap/v2-core" "^1.0.0"
     big.js "^5.2.2"
