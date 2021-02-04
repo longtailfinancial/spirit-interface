@@ -1,6 +1,6 @@
-# Quickswap Interface
+# SpiritSwap
 
-Interface for Quickswap
+Interface for SpiritSwap
 
 ## Development
 
