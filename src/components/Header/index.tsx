@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next'
 import { toast } from 'react-toastify';
 //import { useTransactionAdder } from '../../state/transactions/hooks'
 
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
 import Logo from '../../assets/svg/logo.svg'
 import LogoDark from '../../assets/svg/logo_white.svg'

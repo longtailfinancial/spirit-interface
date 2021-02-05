@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { CardProps, Text } from 'rebass'
 import { Box } from 'rebass/styled-components'
 

@@ -1,7 +1,7 @@
 import { /**ChainId,*/ TokenAmount } from 'valuedex-sdk'
 import React/** , { useMemo }*/ from 'react'
 import { X } from 'react-feather'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import tokenLogo from '../../assets/images/logo_circle.png'
 import { UNI } from '../../constants'
 import { useTotalSupply } from '../../data/TotalSupply'

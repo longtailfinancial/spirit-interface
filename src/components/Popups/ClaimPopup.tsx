@@ -1,7 +1,7 @@
 import { TokenAmount } from 'valuedex-sdk'
 import React, { useEffect } from 'react'
 import { X } from 'react-feather'
-import styled, { keyframes } from 'styled-components'
+import styled, { keyframes } from 'styled-components/macro'
 import tokenLogo from '../../assets/images/logo_circle.png'
 import { ButtonPrimary } from '../../components/Button'
 import { useActiveWeb3React } from '../../hooks'

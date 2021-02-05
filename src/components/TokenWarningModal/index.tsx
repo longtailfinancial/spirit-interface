@@ -1,7 +1,7 @@
 import { Token } from 'valuedex-sdk'
 import { transparentize } from 'polished'
 import React, { useCallback, useMemo, useState } from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { useActiveWeb3React } from '../../hooks'
 import { useAllTokens } from '../../hooks/Tokens'
 import { ExternalLink, TYPE } from '../../theme'

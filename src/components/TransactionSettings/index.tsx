@@ -1,5 +1,5 @@
 import React, { useState, useRef, useContext } from 'react'
-import styled, { ThemeContext } from 'styled-components'
+import styled, { ThemeContext } from 'styled-components/macro'
 
 import QuestionHelper from '../QuestionHelper'
 import { TYPE } from '../../theme'

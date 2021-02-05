@@ -5,7 +5,7 @@ import styled, {
   createGlobalStyle,
   css,
   DefaultTheme
-} from 'styled-components'
+} from 'styled-components/macro'
 import { useIsDarkMode } from '../state/user/hooks'
 import { Text, TextProps } from 'rebass'
 import { Colors } from './styled'

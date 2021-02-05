@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { BookOpen, Code, Info, MessageCircle /**PieChart*/ } from 'react-feather'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { ReactComponent as MenuIcon } from '../../assets/images/menu.svg'
 import { useActiveWeb3React } from '../../hooks'
 import { useOnClickOutside } from '../../hooks/useOnClickOutside'
