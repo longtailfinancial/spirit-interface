@@ -26,6 +26,7 @@ import { RedirectOldRemoveLiquidityPathStructure } from './RemoveLiquidity/redir
 import Swap from './Swap'
 import { OpenClaimAddressModalAndRedirectToSwap, RedirectPathToSwapOnly, RedirectToSwap } from './Swap/redirects'
 import backgroundgLogo from '../assets/images/spiritlogo.png'
+import { useDarkModeManager } from '../state/user/hooks'
 
 
 
@@ -68,6 +69,40 @@ const Marginer = styled.div`
   margin-top: 5rem;
 `
 
+
+export const YellowFilterForLogo = styled.div`
+    /* z-index: -2;
+    filter: sepia(0.5); */
+`
+
+export const FadedBackgroundLogo = styled.div<{isDark:boolean}>`
+   background-image: url(${backgroundgLogo});
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: contain;
+   padding-top: 5vh;
+   margin-top: 5vh;
+   height: 100%;
+   width: 100%;
+   filter: ${props => props.isDark ? 'blur(5px)' : 'blur(5px) hue-rotate(-115deg)'};
+   
+   z-index: -3;    
+   position: absolute;
+  
+   ${({ theme }) => theme.mediaWidth.upToSmall`
+    padding-top: 0vh;
+    margin-top: 0vh;
+    height: 80%;
+    width: 80%;
+  `};
+  
+  ${({ theme }) => theme.mediaWidth.upToMedium`
+    padding-top: 2vh;
+    margin-top: 2vh;
+  `};
+
+`
+
 function TopLevelModals() {
   const open = useModalOpen(ApplicationModal.ADDRESS_CLAIM)
   const toggle = useToggleModal(ApplicationModal.ADDRESS_CLAIM)
@@ -75,6 +110,9 @@ function TopLevelModals() {
 }
 
 export default function App() {
+
+  const [isDark] = useDarkModeManager()
+
   return (
     <Suspense fallback={null}>
       <Route component={GoogleAnalyticsReporter} />
@@ -84,6 +122,9 @@ export default function App() {
         <HeaderWrapper>
           <Header />
         </HeaderWrapper>
+        <YellowFilterForLogo>
+        <FadedBackgroundLogo isDark={isDark}/>
+        </YellowFilterForLogo>
         <BodyWrapper>
           <Popups />
           <Polling />

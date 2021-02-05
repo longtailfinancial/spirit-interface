@@ -82,6 +82,23 @@ const HeaderControls = styled.div`
   `};
 `
 
+
+const HeaderTitle = styled.div<{isDark:boolean}>`
+    color: ${props => props.isDark ? 'white' : '#1B1B1B'};
+    display: flex;
+    font-weight: 700;
+    font-size: 24px; 
+    padding: 0 10 0 10;
+    margin-right: 3em;
+    
+
+    ${({ theme }) => theme.mediaWidth.upToSmall`
+     display: none;
+    `};
+
+`;
+
+
 const HeaderElement = styled.div`
   display: flex;
   align-items: center;
@@ -256,6 +273,9 @@ export default function Header() {
         <Title href=".">
           <img width={'32px'} src={isDark ? LogoDark : Logo} alt="logo" />
         </Title>
+         <HeaderTitle isDark={isDark} >
+             SpiritSwap
+          </HeaderTitle>
         <HeaderLinks>
           <StyledNavLink id={`swap-nav-link`} to={'/swap'}>
             {t('swap')}
@@ -273,8 +293,6 @@ export default function Header() {
           >
             {t('pool')}
           </StyledNavLink>
-         
-
         
         </HeaderLinks>
       </HeaderRow>
