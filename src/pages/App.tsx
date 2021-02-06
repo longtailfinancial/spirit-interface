@@ -81,19 +81,19 @@ export const FadedBackgroundLogo = styled.div<{isDark:boolean}>`
    background-repeat: no-repeat;
    background-size: contain;
    padding-top: 5vh;
-   margin-top: 5vh;
    height: 100%;
    width: 100%;
-   filter: ${props => props.isDark ? 'blur(5px)' : 'blur(5px) hue-rotate(-115deg)'};
-   
+   filter: ${props => props.isDark ? 'blur(6px)' : 'blur(6px) hue-rotate(-115deg)'};
+   overflow: hidden;
    z-index: -3;    
    position: absolute;
   
    ${({ theme }) => theme.mediaWidth.upToSmall`
-    padding-top: 0vh;
-    margin-top: 0vh;
+    padding-top: 10px;
+    margin-top: 10px;
     height: 80%;
-    width: 80%;
+    overflow: hidden;
+
   `};
   
   ${({ theme }) => theme.mediaWidth.upToMedium`
