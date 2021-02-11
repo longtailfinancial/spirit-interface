@@ -3,7 +3,7 @@ import { useActiveWeb3React } from '../../hooks'
 
 import Modal from '../Modal'
 import { AutoColumn, ColumnCenter } from '../Column'
-import styled, { ThemeContext } from 'styled-components'
+import styled, { ThemeContext } from 'styled-components/macro'
 import { RowBetween } from '../Row'
 import { TYPE, CustomLightSpinner } from '../../theme'
 import { X, ArrowUpCircle } from 'react-feather'

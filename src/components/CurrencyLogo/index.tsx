@@ -1,6 +1,6 @@
 import { Currency, ETHER, Token } from 'valuedex-sdk'
 import React, { useMemo } from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
 import EthereumLogo from '../../assets/images/matic.png'
 import useHttpLocations from '../../hooks/useHttpLocations'

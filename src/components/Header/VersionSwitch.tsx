@@ -1,7 +1,7 @@
 import { stringify } from 'qs'
 import React, { useCallback, useMemo } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import useParsedQueryString from '../../hooks/useParsedQueryString'
 import useToggledVersion, { Version } from '../../hooks/useToggledVersion'
 import { MouseoverTooltip } from '../Tooltip'
