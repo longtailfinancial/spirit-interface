@@ -55,7 +55,6 @@ const BodyWrapper = styled.div`
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  z-index: 10;
 
   ${({ theme }) => theme.mediaWidth.upToSmall`
     padding: 16px;
@@ -69,23 +68,19 @@ const Marginer = styled.div`
   margin-top: 5rem;
 `
 
-
-export const YellowFilterForLogo = styled.div`
-    /* z-index: -2;
-    filter: sepia(0.5); */
-`
-
 export const FadedBackgroundLogo = styled.div<{isDark:boolean}>`
    background-image: url(${backgroundgLogo});
    background-position: center;
    background-repeat: no-repeat;
    background-size: contain;
    padding-top: 5vh;
-   height: 100%;
+   margin-top: 10vh;
+
+   height: 93%;
    width: 100%;
    filter: ${props => props.isDark ? 'blur(6px)' : 'blur(6px) hue-rotate(-115deg)'};
    overflow: hidden;
-   z-index: -3;    
+   z-index: -2;    
    position: absolute;
   
    ${({ theme }) => theme.mediaWidth.upToSmall`
@@ -122,9 +117,9 @@ export default function App() {
         <HeaderWrapper>
           <Header />
         </HeaderWrapper>
-        <YellowFilterForLogo>
+      
         <FadedBackgroundLogo isDark={isDark}/>
-        </YellowFilterForLogo>
+    
         <BodyWrapper>
           <Popups />
           <Polling />
