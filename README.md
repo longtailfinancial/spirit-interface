@@ -1,4 +1,4 @@
-# Quickswap Interface
+#  SpiritSwap Interface
 
 Interface for Quickswap
 

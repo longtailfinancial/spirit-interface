@@ -8,7 +8,6 @@ export const BodyWrapper = styled.div`
   width: 100%;
   margin-top: 3%;
   
-
   //glassmorphism UI
   background: rgba( 255, 255, 255, 0.50 );
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -23,14 +22,8 @@ export const BodyWrapper = styled.div`
 
   //to center the logo on mobile screens 
   ${({ theme }) => theme.mediaWidth.upToSmall`
-    padding-top: 10%;
     margin-top: 10%;
-
-  `};
-    
-
-
-
+  `}
 `
 
 /**
