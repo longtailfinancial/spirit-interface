@@ -1,5 +1,5 @@
 import React, { useContext, useMemo } from 'react'
-import styled, { ThemeContext } from 'styled-components'
+import styled, { ThemeContext } from 'styled-components/macro'
 import { Pair } from 'valuedex-sdk'
 import { Link } from 'react-router-dom'
 import { SwapPoolTabs } from '../../components/NavigationTabs'
@@ -49,6 +49,7 @@ const ButtonRow = styled(RowFixed)`
 
 const ResponsiveButtonPrimary = styled(ButtonPrimary)`
   width: fit-content;
+  border: white 1px solid;
   ${({ theme }) => theme.mediaWidth.upToSmall`
     width: 48%;
   `};
@@ -56,6 +57,10 @@ const ResponsiveButtonPrimary = styled(ButtonPrimary)`
 
 const ResponsiveButtonSecondary = styled(ButtonSecondary)`
   width: fit-content;
+  background-color: lightgrey;
+  color: black;
+  &:hover { opacity: 0.7;}
+
   ${({ theme }) => theme.mediaWidth.upToSmall`
     width: 48%;
   `};

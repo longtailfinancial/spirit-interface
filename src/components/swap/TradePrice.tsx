@@ -3,7 +3,7 @@ import { Price } from 'valuedex-sdk'
 import { useContext } from 'react'
 import { Repeat } from 'react-feather'
 import { Text } from 'rebass'
-import { ThemeContext } from 'styled-components'
+import { ThemeContext } from 'styled-components/macro'
 import { StyledBalanceMaxMini } from './styleds'
 
 interface TradePriceProps {

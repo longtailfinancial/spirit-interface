@@ -2,7 +2,7 @@ import { Trade, TradeType } from 'valuedex-sdk'
 import React, { useContext, useMemo, useState } from 'react'
 import { Repeat } from 'react-feather'
 import { Text } from 'rebass'
-import { ThemeContext } from 'styled-components'
+import { ThemeContext } from 'styled-components/macro'
 import { Field } from '../../state/swap/actions'
 import { TYPE } from '../../theme'
 import {

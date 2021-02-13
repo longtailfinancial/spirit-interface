@@ -1,6 +1,6 @@
 import { Trade, TradeType } from 'valuedex-sdk'
 import React, { useContext } from 'react'
-import /**styled,*/ { ThemeContext } from 'styled-components'
+import /**styled,*/ { ThemeContext } from 'styled-components/macro'
 import { Field } from '../../state/swap/actions'
 import { useUserSlippageTolerance } from '../../state/user/hooks'
 import { TYPE/** , ExternalLink*/ } from '../../theme'

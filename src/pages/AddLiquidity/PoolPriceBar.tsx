@@ -1,7 +1,7 @@
 import { Currency, Percent, Price } from 'valuedex-sdk'
 import React, { useContext } from 'react'
 import { Text } from 'rebass'
-import { ThemeContext } from 'styled-components'
+import { ThemeContext } from 'styled-components/macro'
 import { AutoColumn } from '../../components/Column'
 import { AutoRow } from '../../components/Row'
 import { Field } from '../../state/mint/actions'

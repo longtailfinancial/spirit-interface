@@ -1,7 +1,7 @@
 import { transparentize } from 'polished'
 import React from 'react'
 import { AlertTriangle } from 'react-feather'
-import styled, { css } from 'styled-components'
+import styled, { css } from 'styled-components/macro'
 import { Text } from 'rebass'
 import { AutoColumn } from '../Column'
 
@@ -31,6 +31,7 @@ export const SectionBreak = styled.div`
 
 export const BottomGrouping = styled.div`
   margin-top: 1rem;
+  background-color: transparent;
 `
 
 export const ErrorText = styled(Text)<{ severity?: 0 | 1 | 2 | 3 | 4 }>`

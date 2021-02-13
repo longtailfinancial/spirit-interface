@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react'
 import { Route, Switch } from 'react-router-dom'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import GoogleAnalyticsReporter from '../components/analytics/GoogleAnalyticsReporter'
 import AddressClaimModal from '../components/claim/AddressClaimModal'
 import Header from '../components/Header'
@@ -25,6 +25,10 @@ import RemoveLiquidity from './RemoveLiquidity'
 import { RedirectOldRemoveLiquidityPathStructure } from './RemoveLiquidity/redirects'
 import Swap from './Swap'
 import { OpenClaimAddressModalAndRedirectToSwap, RedirectPathToSwapOnly, RedirectToSwap } from './Swap/redirects'
+import backgroundgLogo from '../assets/images/spiritlogo.png'
+import { useDarkModeManager } from '../state/user/hooks'
+
+
 
 import Vote from './Vote'
 import VotePage from './Vote/VotePage'
@@ -51,7 +55,6 @@ const BodyWrapper = styled.div`
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  z-index: 10;
 
   ${({ theme }) => theme.mediaWidth.upToSmall`
     padding: 16px;
@@ -65,6 +68,36 @@ const Marginer = styled.div`
   margin-top: 5rem;
 `
 
+export const FadedBackgroundLogo = styled.div<{isDark:boolean}>`
+   background-image: url(${backgroundgLogo});
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: contain;
+   padding-top: 5vh;
+   margin-top: 10vh;
+
+   height: 93%;
+   width: 100%;
+   filter: ${props => props.isDark ? 'blur(6px)' : 'blur(6px) hue-rotate(-115deg)'};
+   overflow: hidden;
+   z-index: -2;    
+   position: absolute;
+  
+   ${({ theme }) => theme.mediaWidth.upToSmall`
+    padding-top: 10px;
+    margin-top: 10px;
+    height: 80%;
+    overflow: hidden;
+
+  `};
+  
+  ${({ theme }) => theme.mediaWidth.upToMedium`
+    padding-top: 2vh;
+    margin-top: 2vh;
+  `};
+
+`
+
 function TopLevelModals() {
   const open = useModalOpen(ApplicationModal.ADDRESS_CLAIM)
   const toggle = useToggleModal(ApplicationModal.ADDRESS_CLAIM)
@@ -72,6 +105,9 @@ function TopLevelModals() {
 }
 
 export default function App() {
+
+  const [isDark] = useDarkModeManager()
+
   return (
     <Suspense fallback={null}>
       <Route component={GoogleAnalyticsReporter} />
@@ -81,6 +117,9 @@ export default function App() {
         <HeaderWrapper>
           <Header />
         </HeaderWrapper>
+      
+        <FadedBackgroundLogo isDark={isDark}/>
+    
         <BodyWrapper>
           <Popups />
           <Polling />

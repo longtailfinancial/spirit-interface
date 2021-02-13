@@ -2,7 +2,7 @@ import { Trade } from 'valuedex-sdk'
 import React, { Fragment, memo, useContext } from 'react'
 import { ChevronRight } from 'react-feather'
 import { Flex } from 'rebass'
-import { ThemeContext } from 'styled-components'
+import { ThemeContext } from 'styled-components/macro'
 import { TYPE } from '../../theme'
 import CurrencyLogo from '../CurrencyLogo'
 
